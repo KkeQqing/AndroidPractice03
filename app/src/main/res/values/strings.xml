@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AndroidPractice03</string>
+    <string-array name="course_list">
+        <item>疯狂Android讲义-通过数组和属性实现</item>
+        <item>网站规划与设计</item>
+        <item>程序设计与问题求解</item>
+        <item>数据库设计与实践</item>
+    </string-array>
 </resources>
