@@ -16,7 +16,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/listView2" />
+        app:layout_constraintBottom_toTopOf="@id/listView2" >
+
+
+    </ListView>
 
     <ListView
         android:id="@+id/listView2"
@@ -29,15 +32,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/listView3" />
 
+    <!-- listView3 修改为：底部约束到 Button 的顶部 -->
     <ListView
         android:id="@+id/listView3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:divider="#21D63E"
+        android:divider="#FF21D63E"
         android:dividerHeight="2dp"
-        app:layout_constraintTop_toBottomOf="@+id/listView2"
+        app:layout_constraintTop_toBottomOf="@id/listView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toTopOf="@id/btnGoToListView"/>
+
+    <Button
+        android:id="@+id/btnGoToListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转到列表页"
+        app:layout_constraintTop_toBottomOf="@id/listView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
