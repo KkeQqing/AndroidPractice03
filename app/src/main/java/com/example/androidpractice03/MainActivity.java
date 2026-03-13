@@ -71,6 +71,16 @@ public class MainActivity extends AppCompatActivity implements Callback {
             }
         });
 
+        Button btnGoToMenu = findViewById(R.id.btn_go_to_menu);
+        btnGoToMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 创建一个 Intent 来启动 MenuDemoActivity
+                Intent intent = new Intent(MainActivity.this, MenuDemoActivity.class);
+                startActivity(intent);
+            }
+        });
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
